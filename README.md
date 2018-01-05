@@ -9,9 +9,6 @@
 
 ![screenshot](screenshot/screenshot.png "Gtk function plot")
 
-```julia
-./plotfunction.jl # or julia plotfunction.jl
-```
 
 ## Installation and usage
 ```julia
