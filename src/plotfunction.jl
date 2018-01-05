@@ -1,5 +1,4 @@
-module GtkFunctionPlot
-
+#!/usr/bin/env julia
 using Gtk, Gtk.ShortNames, Plots
 gr(legend=false)
 
@@ -7,8 +6,18 @@ outputdir = tempdir() * "/juliaplot" * randstring()
 mkdir(outputdir)
 filename = outputdir * "/plot.png"
 
-ui = Builder(filename=(@__DIR__) * "/ui.glade")
-setproperty!(ui["preview"], :file, (@__DIR__) * "/Julia_prog_language_logo.svg")
+ui = if isinteractive()
+    Builder(filename="ui.glade")
+else
+    Builder(filename=dirname(PROGRAM_FILE) * "/ui.glade")
+end
+
+if isinteractive()
+    setproperty!(ui["preview"], :file, "Julia_prog_language_logo.svg")
+else
+    setproperty!(ui["preview"], :file, dirname(PROGRAM_FILE) * "/Julia_prog_language_logo.svg")
+end
+
 showall(ui["win"])
 
 mutable struct Variables
@@ -232,6 +241,3 @@ if !isinteractive()
     end
     wait(c)
 end
-
-
-end # module
