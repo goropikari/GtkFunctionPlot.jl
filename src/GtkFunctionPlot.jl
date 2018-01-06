@@ -3,12 +3,13 @@ module GtkFunctionPlot
 using Gtk, Gtk.ShortNames, Plots
 gr(legend=false)
 
-outputdir = tempdir() * "/juliaplot" * randstring()
+outputdir = joinpath(tempdir(), "juliaplot" * randstring())
 mkdir(outputdir)
-filename = outputdir * "/plot.png"
+filename = joinpath(outputdir, "plot.png")
 
-ui = Builder(filename=(@__DIR__) * "/ui.glade")
-setproperty!(ui["preview"], :file, (@__DIR__) * "/Julia_prog_language_logo.svg")
+
+ui = Builder(filename=joinpath(@__DIR__, "ui.glade"))
+setproperty!(ui["preview"], :file, joinpath(@__DIR__, "Julia_prog_language_logo.svg"))
 showall(ui["win"])
 
 mutable struct Variables
