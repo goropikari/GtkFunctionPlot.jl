@@ -14,10 +14,10 @@ showall(ui["win"])
 
 mutable struct Variables
     eqn::String
-	x::String
-	xs::Float64
-	xf::Float64
-	y::String
+    x::String
+    xs::Float64
+    xf::Float64
+    y::String
     ys::Float64
     yf::Float64
     t::String
