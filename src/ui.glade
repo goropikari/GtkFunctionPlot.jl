@@ -480,7 +480,7 @@
                           <object class="GtkEntry" id="xlabel">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="width_chars">5</property>
+                            <property name="width_chars">10</property>
                           </object>
                         </child>
                       </object>
@@ -513,7 +513,7 @@
                           <object class="GtkEntry" id="ylabel">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="width_chars">5</property>
+                            <property name="width_chars">10</property>
                           </object>
                         </child>
                       </object>
@@ -546,7 +546,7 @@
                           <object class="GtkEntry" id="zlabel">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="width_chars">5</property>
+                            <property name="width_chars">10</property>
                           </object>
                         </child>
                       </object>
