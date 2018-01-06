@@ -29,17 +29,17 @@ end
 
 
 variables = Variables(getproperty(ui["eqn"], :text, String),
-          getproperty(ui["x"], :text, String),
-          eval(parse(getproperty(ui["xs"], :text, String))),
-          eval(parse(getproperty(ui["xf"], :text, String))),
-          getproperty(ui["y"], :text, String),
-          eval(parse(getproperty(ui["ys"], :text, String))),
-          eval(parse(getproperty(ui["yf"], :text, String))),
-          getproperty(ui["t"], :text, String),
-          eval(parse(getproperty(ui["ts"], :text, String))),
-          eval(parse(getproperty(ui["tf"], :text, String))),
-          getproperty(ui["xlog"], :active, Bool),
-          getproperty(ui["ylog"], :active, Bool))
+                      getproperty(ui["x"], :text, String),
+                      eval(parse(getproperty(ui["xs"], :text, String))),
+                      eval(parse(getproperty(ui["xf"], :text, String))),
+                      getproperty(ui["y"], :text, String),
+                      eval(parse(getproperty(ui["ys"], :text, String))),
+                      eval(parse(getproperty(ui["yf"], :text, String))),
+                      getproperty(ui["t"], :text, String),
+                      eval(parse(getproperty(ui["ts"], :text, String))),
+                      eval(parse(getproperty(ui["tf"], :text, String))),
+                      getproperty(ui["xlog"], :active, Bool),
+                      getproperty(ui["ylog"], :active, Bool))
 
 function update_variables()
     variables.eqn = getproperty(ui["eqn"], :text, String)
